@@ -4,14 +4,14 @@
   "description": "A Progressive Web Application (PWA) text editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"nodemon server/server.js\" \"npm run build\"",
-    "start": "node server/server.js",
-    "server": "node server/server.js",
-    "client": "cd client && npm start",
-    "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
-    "install": "cd client && npm install"
+  "start:dev": "concurrently \"nodemon server.js\" \"npm run build\"",
+  "start": "node server.js",
+  "server": "node server.js",
+  "client": "npm start",
+  "dev": "webpack-dev-server",
+  "build": "webpack --mode production"
   },
+
   "keywords": ["text editor", "PWA", "offline", "IndexedDB"],
   "author": "",
   "license": "ISC",
@@ -42,3 +42,5 @@
   },
   "engines": {
     "node": "18.x"
+  }
+}
