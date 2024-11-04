@@ -1,17 +1,16 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Progressive Web Application (PWA) text editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
+    "start:dev": "concurrently \"nodemon server/server.js\" \"npm run build\"",
     "start": "node server/server.js",
-    "server": "",
     "build": "webpack --mode production",
-    "install": "",
-    "client": ""
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
   },
-  "keywords": [],
+  "keywords": ["text editor", "PWA", "offline", "IndexedDB"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -21,6 +20,10 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
+    "webpack": "^5.51.1",
     "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
