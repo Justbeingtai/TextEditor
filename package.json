@@ -8,6 +8,7 @@
     "start": "node server/server.js",
     "build": "webpack --mode production",
     "install": "cd client && npm install",
+    "server": "node server/server.js",
     "client": "cd client && npm start"
   },
   "keywords": ["text editor", "PWA", "offline", "IndexedDB"],
