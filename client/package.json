@@ -1,13 +1,31 @@
 {
   "name": "JATE",
+  "version": "1.0.0",
+  "description": "A Progressive Web Application (PWA) text editor",
+  "main": "server.js",
   "scripts": {
+    "start:dev": "concurrently \"nodemon server/server.js\" \"npm run build\"",
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "cd client && npm start",
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "install": "cd client && npm install"
   },
-  "author": "2U",
-  "license": "UNLICENSED",
+  "keywords": ["text editor", "PWA", "offline", "IndexedDB"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "idb": "^6.1.2",
+    "code-mirror-themes": "^1.0.0"
+  },
   "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^5.1.4",
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -18,14 +36,9 @@
     "html-webpack-plugin": "^5.3.2",
     "http-server": "^0.11.1",
     "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0",
     "webpack-pwa-manifest": "^4.3.0",
     "workbox-webpack-plugin": "^6.2.4"
   },
-  "dependencies": {
-    "code-mirror-themes": "^1.0.0",
-    "idb": "^6.1.2"
-  }
-}
+  "engines": {
+    "node": "18.x"
