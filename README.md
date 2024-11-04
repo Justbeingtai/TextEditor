@@ -52,7 +52,7 @@ To use J.A.T.E:
 4. To install J.A.T.E as a PWA, click the "Install" button. Once installed, the app can be used offline.
 
 ### Screenshots
-![Editor](/Develop/client/src/images/asdasdadada111.png)
+![Editor](/client/src/images/asdasdadada111.png)
 
 ## Credits
 
